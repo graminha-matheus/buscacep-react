@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-import Lupa from '../../assets/logobc.png'
+import Lupa from '../../assets/lupa2.png'
 
 const Header = () => {
     return (
