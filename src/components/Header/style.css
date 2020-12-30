@@ -1,3 +1,4 @@
-span {
-    isWarningVisible: false
+.logo img {
+    width: 1000px;
+    height: auto;
 }
