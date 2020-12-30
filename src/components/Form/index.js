@@ -1,10 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './style.css';
 
 const Form = () => {
     const [search, setSearch] = useState([]);
     const [end, setEnd] = useState([]);
-    const [isWarningVisible] = useState(false)
+    const [error, setError] = useState(false)
+    
     
     const onChangeHandler = event => {
         /* Essa função serve para setar o valor inicial de search para = evento recebido pelo input */
@@ -14,22 +15,17 @@ const Form = () => {
     const handlerSubmit = async event => {
         event.preventDefault();
             await fetch(`https://viacep.com.br/ws/${search}/json/`)
-            .then(function(response) {
-            
-                useEffect(() => {
-                    if(response.erro === true) {
-                        document.body.classList.toggle('form-error', isWarningVisible);
-                    } else {
-                        response.json().then(data => {
-                            setEnd(data)
-                        })
-                    } 
-                    }, [isWarningVisible])
-            
+            .then(response => response.json())
+            .then(data => {
+                setEnd(data)
+                setError(false)
+            }).catch(err => {
+                setError(true)
             })
     }
 
     console.log(end)
+    console.log(error)
 
     return (
         <div>
@@ -42,7 +38,7 @@ const Form = () => {
                     >
                 </input>
 
-                <span className="form-error">CPF inválido</span>
+                <span className={error === false ? 'dontshow' : 'show'}>CPF inválido</span>
                 
                 <button
                     type="submit"

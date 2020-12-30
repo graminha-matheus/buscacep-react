@@ -17,7 +17,12 @@ form button {
     margin: 15px 0;
 }
 
-form span {
+form .show {
     color: red;
     font-weight: bold;
+}
+
+form .dontshow {
+    overflow: hidden;
+    display: none;
 }
