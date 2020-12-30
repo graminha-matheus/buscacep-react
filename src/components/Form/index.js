@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+/* import {BrowserRouter as Router, Route, Link} from 'react-router-dom'; */
 import './style.css';
 
 const Form = () => {
@@ -47,6 +48,24 @@ const Form = () => {
                         Buscar
                 </button>
             </form>
+
+            <div className="res-form">
+                <form>
+                    <input value={end.logradouro} disabled></input>
+                    
+                    <input placeholder="Numero"></input>
+                    <input placeholder="Complemento"></input>
+                
+                    <input value={end.uf} disabled></input>
+                    <input value={end.localidade} disabled></input>
+
+                    <input value={end.bairro} disabled></input>
+                    <input value={end.cep} disabled></input>
+
+                    <button type="submit">Nova Consulta</button>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
         </div>
     )
 }
