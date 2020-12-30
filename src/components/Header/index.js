@@ -1,11 +1,11 @@
 import React from 'react';
 import './style.css';
 
-import Lupa from '../../assets/lupa2.png'
+import Lupa from '../../assets/logobc.png'
 
 const Header = () => {
     return (
-        <div>
+        <div className="logo">
             <img src={Lupa} alt="busca cep logo"></img>
         </div>
     )
