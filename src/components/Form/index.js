@@ -5,8 +5,8 @@ import './style.css';
 const Form = () => {
     const [search, setSearch] = useState([]);
     const [end, setEnd] = useState([]);
-    const [error, setError] = useState(false)
-    
+    const [error, setError] = useState(false);
+    const [showResponse, setShowResponse] = useState(true);
     
     const onChangeHandler = event => {
         /* Essa função serve para setar o valor inicial de search para = evento recebido pelo input */
@@ -20,17 +20,15 @@ const Form = () => {
             .then(data => {
                 setEnd(data)
                 setError(false)
+                setShowResponse(false)
             }).catch(err => {
                 setError(true)
             })
     }
 
-    console.log(end)
-    console.log(error)
-
     return (
         <div>
-            <form>
+            <form className="searchform">
                 <input 
                     type="text" 
                     placeholder="CEP"
@@ -49,7 +47,7 @@ const Form = () => {
                 </button>
             </form>
 
-            <div className="res-form">
+            <div className={showResponse === true ? 'dont-show-response' : 'show-response'}>
                 <form>
                     <input value={end.logradouro} disabled></input>
                     

@@ -1,4 +1,4 @@
-form { 
+div .searchform { 
     display: flex;
     flex-direction: column;
 
@@ -6,23 +6,27 @@ form {
     align-items: center;
 }
 
-form input {
+div .searchform input {
     height: 25px;
     padding: 5px;
 }
 
-form button {
-    width: 100%;
+div .searchform button {
+    width: 200px;
     height: 25px;
     margin: 15px 0;
 }
 
-form .show {
+div .searchform .show {
     color: red;
     font-weight: bold;
 }
 
-form .dontshow {
+div .searchform .dontshow {
     overflow: hidden;
+    display: none;
+}
+
+div .dont-show-response {
     display: none;
 }
