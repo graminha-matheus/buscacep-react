@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-/* import {BrowserRouter as Router, Route, Link} from 'react-router-dom'; */
+import {FaSearch} from 'react-icons/fa';
 import './style.css';
 
 const Form = () => {
@@ -9,8 +9,7 @@ const Form = () => {
     const [showResponse, setShowResponse] = useState(true);
     
     const onChangeHandler = event => {
-        /* Essa função serve para setar o valor inicial de search para = evento recebido pelo input */
-                setSearch(event.target.value) 
+        setSearch(event.target.value) 
     }
 
     const handlerSubmit = async event => {
@@ -33,19 +32,22 @@ const Form = () => {
                     type="text" 
                     placeholder="CEP"
                     value={search}
-                    onChange={onChangeHandler} /* onChange captura o evento específico */
+                    onChange={onChangeHandler}
                     >
                 </input>
 
-                <span className={error === false ? 'dontshow' : 'show'}>CPF inválido</span>
-                
                 <button
                     type="submit"
                     onClick={handlerSubmit}
                     >
-                        Buscar
+                        <FaSearch size="20"></FaSearch>
                 </button>
+                
             </form>
+
+            <div className="div-span">
+                <span className={error === false ? 'dontshow' : 'show'}>CPF inválido</span>
+            </div>
 
             <div className={showResponse === true ? 'dont-show-response' : 'show-response'}>
                 <form>
@@ -60,7 +62,7 @@ const Form = () => {
                     <input value={end.bairro} disabled></input>
                     <input value={end.cep} disabled></input>
 
-                    <button type="submit">Nova Consulta</button>
+                    <button type="submit" onClick={() => setShowResponse(true)}>Nova Consulta</button>
                     <button type="submit">Enviar</button>
                 </form>
             </div>

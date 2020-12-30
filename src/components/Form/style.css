@@ -1,28 +1,51 @@
 div .searchform { 
     display: flex;
-    flex-direction: column;
+    width: 230px;
 
     justify-content: center;
     align-items: center;
+    margin-top: 18px;
 }
 
 div .searchform input {
-    height: 25px;
-    padding: 5px;
+    height: 40px;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #1179A0;
+    border-radius: 15px 0 0 15px;
 }
 
 div .searchform button {
-    width: 200px;
-    height: 25px;
-    margin: 15px 0;
+    width: 50px;
+    height: 40px;
+
+    border: 1px solid #1179A0;
+    background-color: #1179A0;
+    color: white;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
-div .searchform .show {
+div .searchform button:hover {
+    background-color: rgb(19, 150, 226);
+}
+
+div .div-span {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+
+div .show {
     color: red;
     font-weight: bold;
+
+    margin: 0 auto;
 }
 
-div .searchform .dontshow {
+div .dontshow {
     overflow: hidden;
     display: none;
 }
@@ -30,3 +53,4 @@ div .searchform .dontshow {
 div .dont-show-response {
     display: none;
 }
+
