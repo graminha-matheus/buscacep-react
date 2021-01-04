@@ -36,6 +36,9 @@ div .div-span {
     width: 100%;
     display: flex;
     margin-top: 10px;
+    position: absolute;
+
+    left: 0;
 }
 
 div .show {
@@ -52,5 +55,26 @@ div .dontshow {
 
 div .dont-show-response {
     display: none;
+}
+
+.show-response {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+
+    align-items: center;
+
+    width: 300px;
+    height: 350px;
+
+    background-color: white;
+
+    bottom: 206px;
+    left: 650px;
+}
+
+.show-response .result-form {
+    display: flex;
+    flex-direction: column;
 }
 

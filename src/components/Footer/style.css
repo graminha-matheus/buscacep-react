@@ -1,0 +1,12 @@
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding: 10px;
+    width: 100%;
+}
+
+.footer-container .footer-img {
+    width: 50px;
+}

@@ -11,7 +11,7 @@ const Form = () => {
     const onChangeHandler = event => {
         setSearch(event.target.value) 
     }
-
+    
     const handlerSubmit = async event => {
         event.preventDefault();
             await fetch(`https://viacep.com.br/ws/${search}/json/`)
@@ -42,7 +42,6 @@ const Form = () => {
                     >
                         <FaSearch size="20"></FaSearch>
                 </button>
-                
             </form>
 
             <div className="div-span">
@@ -50,7 +49,7 @@ const Form = () => {
             </div>
 
             <div className={showResponse === true ? 'dont-show-response' : 'show-response'}>
-                <form>
+                <form className="result-form">
                     <input value={end.logradouro} disabled></input>
                     
                     <input placeholder="Numero"></input>
