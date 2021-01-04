@@ -50,16 +50,22 @@ const Form = () => {
 
             <div className={showResponse === true ? 'dont-show-response' : 'show-response'}>
                 <form className="result-form">
-                    <input value={end.logradouro} disabled></input>
+                    <input value={end.logradouro} disabled className="log-input"></input>
                     
-                    <input placeholder="Numero"></input>
-                    <input placeholder="Complemento"></input>
-                
-                    <input value={end.uf} disabled></input>
-                    <input value={end.localidade} disabled></input>
+                    <div className="dual-input">
+                        <input placeholder="Numero" className="num-input"></input>
+                        <input placeholder="Complemento"className="comp-input"></input>
+                    </div>
 
-                    <input value={end.bairro} disabled></input>
-                    <input value={end.cep} disabled></input>
+                    <div className="dual-input">
+                        <input value={end.uf} disabled className="uf-input"></input>
+                        <input value={end.localidade} disabled className="city-input"></input>
+                    </div>
+
+                    <div className="dual-input">
+                        <input value={end.bairro} disabled className="bairro-input"></input>
+                        <input value={end.cep} disabled className="cep-input"></input>
+                    </div>
 
                     <button type="submit" onClick={() => setShowResponse(true)}>Nova Consulta</button>
                     <button type="submit">Enviar</button>

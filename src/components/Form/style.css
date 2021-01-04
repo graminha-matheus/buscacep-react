@@ -68,13 +68,122 @@ div .dont-show-response {
     height: 350px;
 
     background-color: white;
-
-    bottom: 206px;
-    left: 650px;
+    bottom: -1px;
+    left: -1px;
 }
 
 .show-response .result-form {
     display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
+
+    width: 100%;
+    height: 100%;    
+}
+
+.show-response .result-form .log-input {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 25px;
+    margin: 0 auto;
+
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #1179A0;
+    border-radius: 15px;
+}
+
+.show-response .result-form .num-input {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    height: 25px;
+    margin: 0 auto;
+
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #1179A0;
+    border-radius: 15px;
+}
+
+.show-response .result-form .comp-input {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    height: 25px;
+    margin: 0 auto;
+
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #1179A0;
+    border-radius: 15px;
+}
+
+.show-response .result-form .dual-input {
+    display: flex;
+    width: 98%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.show-response .result-form .uf-input {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    height: 25px;
+    margin: 0 auto;
+
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #1179A0;
+    border-radius: 15px;
+}
+
+.show-response .result-form .city-input {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    height: 25px;
+    margin: 0 auto;
+
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #1179A0;
+    border-radius: 15px;
+}
+
+.show-response .result-form .bairro-input {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    height: 25px;
+    margin: 0 auto;
+
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #1179A0;
+    border-radius: 15px;
+}
+
+.show-response .result-form .cep-input {
+    display: flex;
+    flex-wrap: wrap;
+    width: 35%;
+    height: 25px;
+    margin: 0 auto;
+    font-size: 10;
+    height: 40px;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #1179A0;
+    border-radius: 15px;
 }
 
