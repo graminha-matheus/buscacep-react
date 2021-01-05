@@ -67,8 +67,10 @@ const Form = () => {
                         <input value={end.cep} disabled className="cep-input"></input>
                     </div>
 
-                    <button type="submit" onClick={() => setShowResponse(true)}>Nova Consulta</button>
-                    <button type="submit">Enviar</button>
+                    <div className="dual-input">
+                        <button type="submit" onClick={() => setShowResponse(true)} className="return">Nova Consulta</button>
+                        <button type="submit" className="handle-submit">Enviar</button>
+                    </div>
                 </form>
             </div>
         </div>
