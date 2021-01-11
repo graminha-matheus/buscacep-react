@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 
+import client from '../../ZAFClient';
+
 import {FaSearch} from 'react-icons/fa';
 import './style.css';
 
@@ -58,6 +60,17 @@ const Form = () => {
 
     const handleData = event => {
         event.preventDefault()
+    }
+
+    const submitForm = data => {
+        
+        let endereco = `\n${data.rua}, ${data.numero}` +
+        ((data.complemento) ? `\n${data.complemento},`: '') + // se houver complemento imprime na tela
+        `\n${data.localidade} - ${data.uf}` +
+        `\n${data.bairro}, ${data.cep}\n`
+
+
+        client.invoke('comment.appendMarkdown', endereco)
     }
 
 
@@ -145,7 +158,6 @@ const Form = () => {
                         <input 
                             value={end.cep}
                             name="cep" 
-                            name="cep" 
                             disabled 
                             className="cep-input">
                         </input>
@@ -161,7 +173,7 @@ const Form = () => {
                         <button 
                             type="submit" 
                             className="handle-submit" 
-                            onSubmit={handleData}>
+                            onClick={() => submitForm(defaultValues)}>
                             Enviar
                         </button>
                     </div>
